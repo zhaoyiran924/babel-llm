@@ -73,6 +73,9 @@
             <span class="author-block">
               <a href="https://mlxdb.github.io/author/li-zhaodonghui/">Zhaodonghui Li</a>,
             </span>
+            <span class="author-block">
+              <a href="https://lidongbing.github.io/research.html">Lidong Bing</a>,
+            </span>
           </div>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -80,6 +83,9 @@
             </span>
             <span class="author-block">
               <a href="https://royrong.me/">Yu Rong</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://zhaodeli.github.io/">Deli Zhao</a>,
             </span>
             <span class="author-block">
               <a href="https://isakzhang.github.io">Wenxuan Zhang*</a> (Corresponding Author)
@@ -149,7 +155,7 @@
     <div class="hero-body">
       <h4 class="subtitle has-text-centered">
         🔥<span style="color: #ff3860">[NEW!]</span> 
-        <a href="https://huggingface.co/SeaLLMs/SeaLLM3-7B-Chat">Babel</a> is a open-source multilingual LLM supporting 25 widely spoken languages and covering over 90% of global speakers..
+        <a href="https://huggingface.co/SeaLLMs/SeaLLM3-7B-Chat">Babel</a> is a open-source multilingual LLM supporting 25 widely spoken languages and covering over 90% of global speakers.
         <br>
         <!--
         🔥<span style="color: #ff3860">[HOT!]</span> 
@@ -160,8 +166,6 @@
   </div>
 </section>
 
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
@@ -170,13 +174,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Large language models (LLMs) have revolutionized natural language processing (NLP), but most focus on English or resource-rich languages, leaving languages like Hindi, Bengali, and Urdu underserved despite their large speaker base. 
+            Large language models (LLMs) have transformed natural language processing (NLP), yet open-source multilingual LLMs remain scarce, with existing models often limited in language coverage. Such models typically prioritize well-resourced languages like French and German, while widely spoken but under-resourced languages such as Hindi, Bengali, and Urdu are overlooked.
         </p>
         <p>
-            To address this gap, we introduce <strong>Babel</strong>, a multilingual LLM supporting 25 widely spoken languages and covering over 90% of global speakers. Babel employs a sophisticated data-cleaning pipeline that combines diverse pre-training corpora, filtered through an LLM-based quality classifier, with supervised fine-tuning using both open-source and synthetic multilingual datasets.
+          To address this disparity, we introduce <strong>Babel</strong>, a multilingual LLM that covers the top 25 languages by number of speakers, supports over 90% of the global population, and includes many languages neglected by other open multilingual LLMs.
         </p>
         <p>
-            We implement a novel layer extension technique that elevates Babel's performance ceiling. Available in both base and chat versions, Babel offers two open-source variants—<strong>Babel-9B</strong> and <strong>Babel-83B</strong>—that achieve state-of-the-art results.
+          Unlike traditional continue pretraining approaches, Babel expands its parameter count through a layer extension technique that elevates Babel's performance ceiling. We introduce two variants: <strong>Babel-9B</strong>, designed for efficient single-GPU inference and fine-tuning, and <strong>Babel-83B</strong>, which sets a new standard for open multilingual LLMs. Extensive evaluations on multilingual tasks demonstrate its superior performance compared to open LLMs of comparable size. In addition, using existing supervised fine-tuning datasets, Babel achieves remarkable performance, with Babel-9B-Chat leading among 10B-sized LLMs and Babel-83B-Chat setting a new standard for open LLMs, performing comparably to GPT-4o on certain tasks.
         </p>
         </div>
       </div>
@@ -257,165 +261,165 @@
       <div class="table-container">
         <table>
           <thead>
-              <tr>
-                  <th>Language</th>
-                  <th>Speakers</th>
-                  <th>Language Family</th>
-                  <th>Spoken Region</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-                  <td>English</td>
-                  <td>1.5B</td>
-                  <td>Germanic</td>
-                  <td>Worldwide</td>
-              </tr>
-              <tr>
-                  <td>Chinese (Mandarin)</td>
-                  <td>1.4B</td>
-                  <td>Sinitic</td>
-                  <td>China, Taiwan, Singapore</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Hindi</td>
-                  <td>700M</td>
-                  <td>Indo-Aryan</td>
-                  <td>India, South Asia</td>
-              </tr>
-              <tr>
-                  <td>Spanish</td>
-                  <td>595M</td>
-                  <td>Romance</td>
-                  <td>Spain, Latin America</td>
-              </tr>
-              <tr>
-                  <td>Standard Arabic</td>
-                  <td>400M</td>
-                  <td>Semitic</td>
-                  <td>Middle East, North Africa</td>
-              </tr>
-              <tr>
-                  <td>French</td>
-                  <td>300M</td>
-                  <td>Romance</td>
-                  <td>France, Africa, Canada</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Bengali</td>
-                  <td>300M</td>
-                  <td>Indo-Aryan</td>
-                  <td>Bangladesh, India</td>
-              </tr>
-              <tr>
-                  <td>Portuguese</td>
-                  <td>270M</td>
-                  <td>Romance</td>
-                  <td>Brazil, Portugal, Angola</td>
-              </tr>
-              <tr>
-                  <td>Russian</td>
-                  <td>260M</td>
-                  <td>Slavic</td>
-                  <td>Russia, Eastern Europe</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Urdu</td>
-                  <td>230M</td>
-                  <td>Indo-Aryan</td>
-                  <td>Pakistan, India</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Indonesian</td>
-                  <td>200M</td>
-                  <td>Malayo-Polynesian</td>
-                  <td>Indonesia, Malaysia</td>
-              </tr>
-              <tr>
-                  <td>Standard German</td>
-                  <td>135M</td>
-                  <td>Germanic</td>
-                  <td>Germany, Austria, Switzerland</td>
-              </tr>
-              <tr>
-                  <td>Japanese</td>
-                  <td>130M</td>
-                  <td>Japonic</td>
-                  <td>Japan</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Swahili</td>
-                  <td>100M</td>
-                  <td>Bantu</td>
-                  <td>East Africa</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Filipino (Tagalog)</td>
-                  <td>100M</td>
-                  <td>Malayo-Polynesian</td>
-                  <td>Philippines</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Tamil</td>
-                  <td>90M</td>
-                  <td>Dravidian</td>
-                  <td>India, Sri Lanka</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Vietnamese</td>
-                  <td>86M</td>
-                  <td>Vietic</td>
-                  <td>Vietnam</td>
-              </tr>
-              <tr>
-                  <td>Turkish</td>
-                  <td>85M</td>
-                  <td>Turkic</td>
-                  <td>Turkey, Cyprus</td>
-              </tr>
-              <tr>
-                  <td>Italian</td>
-                  <td>85M</td>
-                  <td>Romance</td>
-                  <td>Italy, Switzerland</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Javanese</td>
-                  <td>83M</td>
-                  <td>Malayo-Polynesian</td>
-                  <td>Indonesia (Java)</td>
-              </tr>
-              <tr>
-                  <td>Korean</td>
-                  <td>80M</td>
-                  <td>Koreanic</td>
-                  <td>Korea (North and South)</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Hausa</td>
-                  <td>80M</td>
-                  <td>Chadic</td>
-                  <td>Nigeria, Niger</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Iranian Persian</td>
-                  <td>80M</td>
-                  <td>Indo-Iranian</td>
-                  <td>Iran, Afghanistan</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Thai</td>
-                  <td>80M</td>
-                  <td>Kra-Dai</td>
-                  <td>Thailand</td>
-              </tr>
-              <tr class="highlight">
-                  <td>Burmese</td>
-                  <td>50M</td>
-                  <td>Tibeto-Burman</td>
-                  <td>Myanmar</td>
-              </tr>
-          </tbody>
+            <tr>
+                <th>Language</th>
+                <th>Speakers</th>
+                <th>Language Family</th>
+                <th>Macroarea</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>English</td>
+                <td>1.5B</td>
+                <td>Germanic</td>
+                <td>Worldwide</td>
+            </tr>
+            <tr>
+                <td>Chinese (Mandarin)</td>
+                <td>1.4B</td>
+                <td>Sinitic</td>
+                <td>Asia</td>
+            </tr>
+            <tr class="highlight">
+                <td>Hindi</td>
+                <td>700M</td>
+                <td>Indo-Aryan</td>
+                <td>Asia</td>
+            </tr>
+            <tr>
+                <td>Spanish</td>
+                <td>595M</td>
+                <td>Romance</td>
+                <td>Americas, Europe</td>
+            </tr>
+            <tr>
+                <td>Standard Arabic</td>
+                <td>400M</td>
+                <td>Semitic</td>
+                <td>Asia, Africa</td>
+            </tr>
+            <tr>
+                <td>French</td>
+                <td>300M</td>
+                <td>Romance</td>
+                <td>Europe, Africa, Americas</td>
+            </tr>
+            <tr class="highlight">
+                <td>Bengali</td>
+                <td>300M</td>
+                <td>Indo-Aryan</td>
+                <td>Asia</td>
+            </tr>
+            <tr>
+                <td>Portuguese</td>
+                <td>270M</td>
+                <td>Romance</td>
+                <td>Americas, Europe, Africa</td>
+            </tr>
+            <tr>
+                <td>Russian</td>
+                <td>260M</td>
+                <td>Slavic</td>
+                <td>Europe, Asia</td>
+            </tr>
+            <tr class="highlight">
+                <td>Urdu</td>
+                <td>230M</td>
+                <td>Indo-Aryan</td>
+                <td>Asia</td>
+            </tr>
+            <tr class="highlight">
+                <td>Indonesian</td>
+                <td>200M</td>
+                <td>Malayo-Polynesian</td>
+                <td>Asia</td>
+            </tr>
+            <tr>
+                <td>Standard German</td>
+                <td>135M</td>
+                <td>Germanic</td>
+                <td>Europe</td>
+            </tr>
+            <tr>
+                <td>Japanese</td>
+                <td>130M</td>
+                <td>Japonic</td>
+                <td>Asia</td>
+            </tr>
+            <tr class="highlight">
+                <td>Swahili</td>
+                <td>100M</td>
+                <td>Bantu</td>
+                <td>Africa</td>
+            </tr>
+            <tr class="highlight">
+                <td>Filipino (Tagalog)</td>
+                <td>100M</td>
+                <td>Malayo-Polynesian</td>
+                <td>Asia</td>
+            </tr>
+            <tr class="highlight">
+                <td>Tamil</td>
+                <td>90M</td>
+                <td>Dravidian</td>
+                <td>Asia</td>
+            </tr>
+            <tr class="highlight">
+                <td>Vietnamese</td>
+                <td>86M</td>
+                <td>Vietic</td>
+                <td>Asia</td>
+            </tr>
+            <tr>
+                <td>Turkish</td>
+                <td>85M</td>
+                <td>Turkic</td>
+                <td>Asia, Europe</td>
+            </tr>
+            <tr>
+                <td>Italian</td>
+                <td>85M</td>
+                <td>Romance</td>
+                <td>Europe</td>
+            </tr>
+            <tr class="highlight">
+                <td>Javanese</td>
+                <td>83M</td>
+                <td>Malayo-Polynesian</td>
+                <td>Asia</td>
+            </tr>
+            <tr>
+                <td>Korean</td>
+                <td>80M</td>
+                <td>Koreanic</td>
+                <td>Asia</td>
+            </tr>
+            <tr class="highlight">
+                <td>Hausa</td>
+                <td>80M</td>
+                <td>Chadic</td>
+                <td>Africa</td>
+            </tr>
+            <tr class="highlight">
+                <td>Iranian Persian</td>
+                <td>80M</td>
+                <td>Indo-Iranian</td>
+                <td>Asia</td>
+            </tr>
+            <tr class="highlight">
+                <td>Thai</td>
+                <td>80M</td>
+                <td>Kra-Dai</td>
+                <td>Asia</td>
+            </tr>
+            <tr class="highlight">
+                <td>Burmese</td>
+                <td>50M</td>
+                <td>Tibeto-Burman</td>
+                <td>Asia</td>
+            </tr>
+        </tbody>
       </table>
       </div>
     </div>
