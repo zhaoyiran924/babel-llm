@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Babel - Open Multilingual Large Language Models Serving Over 90\% of Global Speakers">
+  <meta name="keywords" content="SeaLLM, SeaLMMM">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Babel - Open Multilingual Large Language Models Serving Over 90\% of Global Speakers</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <!-- <link rel="icon" href="./static/images/favicon-32x32.png"> -->
+  <link rel="icon" href="./static/images/babel.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-widescreen">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            <img src="./static/images/babel.png" alt="" style="height: 2.5em;">
+            <br>
+            Babel - Open Multilingual Large Language Models Serving Over 90% of Global Speakers
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zhaoyiran924.github.io/">Yiran Zhao</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.linkedin.com/in/chaoqun-liu/">Chaoqun Liu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://ntudy.github.io/">Yue Deng</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://yingjiahao14.github.io/">Jiahao Ying</a>,
+            </span>
+            <span class="author-block">
+              <a href="">Mahani Aljunied</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://mlxdb.github.io/author/li-zhaodonghui/">Zhaodonghui Li</a>,
+            </span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://kenchan0226.github.io/">Hou Pong Chan</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://royrong.me/">Yu Rong</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://isakzhang.github.io">Wenxuan Zhang*</a> (Corresponding Author)
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">DAMO Academy, Alibaba Group</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2312.00738"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="fas fa-file-pdf"></i> -->
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/babel-v1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github</span>
+                  </a>
+              </span>
+              <!-- Models Link. -->
+              <span class="link-block">
+                <a href="https://huggingface.co/SeaLLMs/SeaLLM3-7B-Chat"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <!-- <i class="far fa-images"></i> -->
+                      🤗
+                  </span>
+                  <span>Models</span>
+                  </a>
+                </span>
+              <!-- darasets Link. -->
+              <!-- <span class="link-block">
+                <a href="https://huggingface.co/datasets/SeaLLMs/Sea-bench"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a>
+                </span> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <h4 class="subtitle has-text-centered">
+        🔥<span style="color: #ff3860">[NEW!]</span> 
+        <a href="https://huggingface.co/SeaLLMs/SeaLLM3-7B-Chat">Babel</a> is a open-source multilingual LLM supporting 25 widely spoken languages and covering over 90% of global speakers..
+        <br>
+        <!--
+        🔥<span style="color: #ff3860">[HOT!]</span> 
+        <a href="https://huggingface.co/SeaLLMs/SeaLMMM-7B-v0.1">SeaLMMM-7B-v0.1</a> is introduced with <b>Multimodal</b> Multilingual capabilities in SEA languages.
+        -->
+      </h4>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large language models (LLMs) have revolutionized natural language processing (NLP), but most focus on English or resource-rich languages, leaving languages like Hindi, Bengali, and Urdu underserved despite their large speaker base. 
+        </p>
+        <p>
+            To address this gap, we introduce <strong>Babel</strong>, a multilingual LLM supporting 25 widely spoken languages and covering over 90% of global speakers. Babel employs a sophisticated data-cleaning pipeline that combines diverse pre-training corpora, filtered through an LLM-based quality classifier, with supervised fine-tuning using both open-source and synthetic multilingual datasets.
+        </p>
+        <p>
+            We implement a novel layer extension technique that elevates Babel's performance ceiling. Available in both base and chat versions, Babel offers two open-source variants—<strong>Babel-9B</strong> and <strong>Babel-83B</strong>—that achieve state-of-the-art results.
+        </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+</section>
+
+<!-- introduction -->
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Introduction</h2>
+  </div>
+</section> -->
+
+<!-- <section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-4">SeaLLM-7B-v2.5 DEMO</h2>
+    <gradio-app src="https://seallms-seallm-7b-v2-5-simple.hf.space"></gradio-app>
+  </div>    
+</section> -->
+
+
+<!-- Evaluation -->
+<section class="section">
+  <div class="container" style="max-width: 800px; margin: 0 auto;">
+    <!-- <h2 class="title is-3">Evaluation</h2> -->
+
+    <h2 class="title is-4">Babel Supported Language</h2>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .section {
+        padding: 20px;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      .title {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .content {
+        margin-top: 10px;
+      }
+      .has-text-justified {
+        text-align: justify;
+      }
+      .table-container {
+        overflow-x: auto;
+        margin-top: 20px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+        font-weight: bold;
+      }
+      .highlight {
+        background-color: #d9f2ff; /* Light blue for highlighted rows */
+      }
+    </style>
+    <div class="content has-text-justified">
+      <p>Languages supported by Babel sorted by the number of speakers (B = Billion, M = Million). Highlighted languages are those underexplored by previous multilingual LLMs.</p>
+      
+      <div class="table-container">
+        <table>
+          <thead>
+              <tr>
+                  <th>Language</th>
+                  <th>Speakers</th>
+                  <th>Language Family</th>
+                  <th>Spoken Region</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>English</td>
+                  <td>1.5B</td>
+                  <td>Germanic</td>
+                  <td>Worldwide</td>
+              </tr>
+              <tr>
+                  <td>Chinese (Mandarin)</td>
+                  <td>1.4B</td>
+                  <td>Sinitic</td>
+                  <td>China, Taiwan, Singapore</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Hindi</td>
+                  <td>700M</td>
+                  <td>Indo-Aryan</td>
+                  <td>India, South Asia</td>
+              </tr>
+              <tr>
+                  <td>Spanish</td>
+                  <td>595M</td>
+                  <td>Romance</td>
+                  <td>Spain, Latin America</td>
+              </tr>
+              <tr>
+                  <td>Standard Arabic</td>
+                  <td>400M</td>
+                  <td>Semitic</td>
+                  <td>Middle East, North Africa</td>
+              </tr>
+              <tr>
+                  <td>French</td>
+                  <td>300M</td>
+                  <td>Romance</td>
+                  <td>France, Africa, Canada</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Bengali</td>
+                  <td>300M</td>
+                  <td>Indo-Aryan</td>
+                  <td>Bangladesh, India</td>
+              </tr>
+              <tr>
+                  <td>Portuguese</td>
+                  <td>270M</td>
+                  <td>Romance</td>
+                  <td>Brazil, Portugal, Angola</td>
+              </tr>
+              <tr>
+                  <td>Russian</td>
+                  <td>260M</td>
+                  <td>Slavic</td>
+                  <td>Russia, Eastern Europe</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Urdu</td>
+                  <td>230M</td>
+                  <td>Indo-Aryan</td>
+                  <td>Pakistan, India</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Indonesian</td>
+                  <td>200M</td>
+                  <td>Malayo-Polynesian</td>
+                  <td>Indonesia, Malaysia</td>
+              </tr>
+              <tr>
+                  <td>Standard German</td>
+                  <td>135M</td>
+                  <td>Germanic</td>
+                  <td>Germany, Austria, Switzerland</td>
+              </tr>
+              <tr>
+                  <td>Japanese</td>
+                  <td>130M</td>
+                  <td>Japonic</td>
+                  <td>Japan</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Swahili</td>
+                  <td>100M</td>
+                  <td>Bantu</td>
+                  <td>East Africa</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Filipino (Tagalog)</td>
+                  <td>100M</td>
+                  <td>Malayo-Polynesian</td>
+                  <td>Philippines</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Tamil</td>
+                  <td>90M</td>
+                  <td>Dravidian</td>
+                  <td>India, Sri Lanka</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Vietnamese</td>
+                  <td>86M</td>
+                  <td>Vietic</td>
+                  <td>Vietnam</td>
+              </tr>
+              <tr>
+                  <td>Turkish</td>
+                  <td>85M</td>
+                  <td>Turkic</td>
+                  <td>Turkey, Cyprus</td>
+              </tr>
+              <tr>
+                  <td>Italian</td>
+                  <td>85M</td>
+                  <td>Romance</td>
+                  <td>Italy, Switzerland</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Javanese</td>
+                  <td>83M</td>
+                  <td>Malayo-Polynesian</td>
+                  <td>Indonesia (Java)</td>
+              </tr>
+              <tr>
+                  <td>Korean</td>
+                  <td>80M</td>
+                  <td>Koreanic</td>
+                  <td>Korea (North and South)</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Hausa</td>
+                  <td>80M</td>
+                  <td>Chadic</td>
+                  <td>Nigeria, Niger</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Iranian Persian</td>
+                  <td>80M</td>
+                  <td>Indo-Iranian</td>
+                  <td>Iran, Afghanistan</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Thai</td>
+                  <td>80M</td>
+                  <td>Kra-Dai</td>
+                  <td>Thailand</td>
+              </tr>
+              <tr class="highlight">
+                  <td>Burmese</td>
+                  <td>50M</td>
+                  <td>Tibeto-Burman</td>
+                  <td>Myanmar</td>
+              </tr>
+          </tbody>
+      </table>
+      </div>
+    </div>
+
+    <!-- seaexam -->
+    <!--
+    <h2 class="title is-4">SeaExam Leaderboard</h2>
+    <div class="content has-text-justified">
+      <p>
+        According to the <a href="https://huggingface.co/spaces/SeaLLMs/SeaExam_leaderboard">SeaExam leaderboard</a>, which evaluates model performance through human-exam style questions in Southeast Asian languages, the latest SeaLLMs-v2.5 is ranked at the top among open-source models of similar size.
+        <gradio-app src="https://seallms-seaexam-leaderboard.hf.space"></gradio-app>
+      </p>
+    </div>
+    -->
+
+    <!-- SeaBench -->
+    <h2 class="title is-4">Multilingual Instruction-following Capability - SeaBench</h2>
+    <div class="content has-text-justified">
+      <p>
+        We employ multilingual tasks across several categories:
+      </p>
+      <ol>
+        <li>
+          <span class="bold">World Knowledge:</span> 
+          MMMLU (<a href="https://huggingface.co/datasets/openai/MMMLU" target="_blank">OpenAI 2024</a>), a human-translated version of MMLU (<a href="https://arxiv.org/abs/2009.03300" target="_blank">Hendrycks et al. 2021</a>) available in 14 languages. For languages not covered, we use Google Translate (<a href="https://translate.google.com/" target="_blank">Google Translate API</a>) to generate translations. Additionally, we include M3Exam (<a href="https://arxiv.org/abs/2306.05179" target="_blank">M3Exam</a>), which consists of authentic human exam questions collected from various countries, covering multiple subjects and educational levels.
+        </li>
+        <li>
+          <span class="bold">Reasoning:</span> MGSM (<a href="https://arxiv.org/abs/2210.03057" target="_blank">Shi et al. 2022</a>) and XCOPA (<a href="https://aclanthology.org/2020.emnlp-main.185/" target="_blank">Ponti et al. 2020</a>).
+        </li>
+        <li>
+          <span class="bold">Understanding:</span> XNLI (<a href="https://arxiv.org/abs/1809.05053" target="_blank">Conneau et al. 2018</a>).
+        </li>
+        <li>
+          <span class="bold">Translation:</span> Flores-200 (<a href="https://arxiv.org/abs/2207.04672" target="_blank">NLLB Team 2022</a>).
+        </li>
+      </ol>
+      
+      <div class="table-container">
+        <table>
+          <caption>Performance of 10B-Size Base Models vs. Babel-9B</caption>
+          <thead>
+            <tr>
+              <th>Dataset</th>
+              <th>Gemma2-9B</th>
+              <th>Mistral-12B</th>
+              <th>Llama3.1-8B</th>
+              <th>Qwen2.5-7B</th>
+              <th>GLM4-9B</th>
+              <th>Babel-9B</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>MMMLU</td>
+              <td class="bold">59.8</td>
+              <td>52.8</td>
+              <td>49.4</td>
+              <td>56.7</td>
+              <td>55.6</td>
+              <td>59.4</td>
+            </tr>
+            <tr>
+              <td>M3Exam</td>
+              <td class="bold">61.6</td>
+              <td>54.2</td>
+              <td>52.5</td>
+              <td>58.8</td>
+              <td>56.6</td>
+              <td>61.3</td>
+            </tr>
+            <tr>
+              <td>XCOPA</td>
+              <td>84.6</td>
+              <td>81.3</td>
+              <td>75.9</td>
+              <td>81.1</td>
+              <td>87.3</td>
+              <td class="bold">89.2</td>
+            </tr>
+            <tr>
+              <td>MGSM</td>
+              <td>34.3</td>
+              <td>26.0</td>
+              <td>18.0</td>
+              <td>41.1</td>
+              <td>39.0</td>
+              <td class="bold">43.4</td>
+            </tr>
+            <tr>
+              <td>XNLI</td>
+              <td>61.7</td>
+              <td>55.0</td>
+              <td>48.9</td>
+              <td>70.3</td>
+              <td>69.9</td>
+              <td class="bold">71.9</td>
+            </tr>
+            <tr>
+              <td>Flores-200</td>
+              <td>53.2</td>
+              <td>50.8</td>
+              <td>50.9</td>
+              <td>45.5</td>
+              <td>46.6</td>
+              <td class="bold">55.1</td>
+            </tr>
+            <tr class="highlight">
+              <td><em>Average</em></td>
+              <td>59.5</td>
+              <td>53.4</td>
+              <td>49.3</td>
+              <td>58.9</td>
+              <td>59.2</td>
+              <td class="bold">63.4</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- model information -->
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgement</h2>
+    <p>We would like to thank Guanzheng Chen for assisting with the implementation of the training codebase. Our special thanks go to our professional and native linguists—Tantong Champaiboon, Nguyen Ngoc Yen Nhi, and Tara Devina Putri—who contributed to building, evaluating, and fact-checking our sampled pretraining dataset. We also appreciate Fan Wang, Jiasheng Tang, Xin Li, and Hao Zhang for their efforts in coordinating computing resources..</p>
+  </div>
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <p>
+      If you find our project useful, we hope you would kindly star our repo and cite our work as follows.
+      <br>
+      Corresponding Author: <a href= "mailto: isakzhang@gmail.com">isakzhang@gmail.com</a>
+    </p>
+    <pre><code>@article{babel2025,
+  author = {Yiran Zhao, Chaoqun Liu, Yue Deng, Jiahao Ying, Mahani Aljunied, Zhaodonghui Li, Hou Pong Chan, Yu Rong, Wenxuan Zhang},
+  title = {Babel: Open Multilingual Large Language Models Serving Over 90 of Global Speakers},
+  year = {2025},
+  url = {https://arxiv.org/abs/2407.19672}
+}
+    </code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="https://arxiv.org/pdf/2312.00738.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/DAMO-NLP-SG/SeaLLMs" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is adapted from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
