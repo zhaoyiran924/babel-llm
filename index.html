@@ -100,7 +100,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2312.00738"
+                <a href="https://github.com/babel-llm/babel-llm/paper/babel.pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <!-- <i class="fas fa-file-pdf"></i> -->
@@ -111,7 +111,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/babel-v1"
+                <a href="https://github.com/babel-llm/babel-llm"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -121,7 +121,7 @@
               </span>
               <!-- Models Link. -->
               <span class="link-block">
-                <a href="https://huggingface.co/SeaLLMs/SeaLLM3-7B-Chat"
+                <a href="https://huggingface.co/Tower-Babel"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <!-- <i class="far fa-images"></i> -->
@@ -565,6 +565,64 @@
         </table>
       </div>
     </div>
+    <div class="table-container">
+      <table>
+        <caption>Performance of Open Large Multilingual LLMs vs. Babel-83B-Base</caption>
+        <thead>
+            <tr>
+                <th>Dataset</th>
+                <th>Llama3.1-70B</th>
+                <th>Qwen2.5-72B</th>
+                <th>Babel-83B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>MMMLU</td>
+                <td>69.1</td>
+                <td>74.7</td>
+                <td><b>76.3</b></td>
+            </tr>
+            <tr>
+                <td>M3Exam</td>
+                <td>67.4</td>
+                <td>71.2</td>
+                <td><b>72.1</b></td>
+            </tr>
+            <tr>
+                <td>XCOPA</td>
+                <td>92.6</td>
+                <td>81.1</td>
+                <td><b>92.8</b></td>
+            </tr>
+            <tr>
+                <td>MGSM</td>
+                <td>48.9</td>
+                <td><b>63.9</b></td>
+                <td>62.6</td>
+            </tr>
+            <tr>
+                <td>XNLI</td>
+                <td>66.2</td>
+                <td>74.9</td>
+                <td><b>76.6</b></td>
+            </tr>
+            <tr>
+                <td>Flores-200</td>
+                <td>57.4</td>
+                <td>53.1</td>
+                <td><b>58.8</b></td>
+            </tr>
+            <tr class="highlight">
+                <td><i>Average</i></td>
+                <td>66.9</td>
+                <td>69.8</td>
+                <td><b>73.2</b></td>
+            </tr>
+        </tbody>
+    </table>
+    </div>
+  </div>
   </div>
 </section>
 
